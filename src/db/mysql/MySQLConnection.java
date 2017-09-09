@@ -167,8 +167,8 @@ public class MySQLConnection implements DBConnection {
 
 
 	@Override
-	public Set<String> getCategories(String itemId) {
-		Set<String> categories = new HashSet<>();
+	  public Set<String> getCategories(String itemId) {
+	    Set<String> categories = new HashSet<>();
 	    try {
 	      String sql = "SELECT category from categories WHERE item_id = ? ";
 	      PreparedStatement statement = conn.prepareStatement(sql);
@@ -181,7 +181,7 @@ public class MySQLConnection implements DBConnection {
 	      System.out.println(e.getMessage());
 	    }
 	    return categories;
-	}
+	  }
 
 	@Override
 	public void saveItem(Item item) {
